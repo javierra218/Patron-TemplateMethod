@@ -1,8 +1,25 @@
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\IDishAccess.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\Messages.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\domain\services\DishService.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\DishAccessImplSockets.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIDish.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIMenu.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\Factory.java
-C:\Users\Luis Tabares\Documents\NetBeansProjects\Taller patron template method\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\RestaurantSocket.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\RestaurantAccessImplSockets.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\domain\services\PlateService.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIMenu.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\Security.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIPlate.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\Factory.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIAddCityDialogDialog.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIPanelOpciones.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\domain\services\UserService.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\PlateSocket.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\UserAccessImplSockets.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\Messages.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\PlateAccessImplSockets.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUICustomizerPackage.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\UserSocket.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\IUserAccess.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\IPlateAccess.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUILogin.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUICustomer.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\domain\User.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIListaComponente.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\access\IRestaurantAccess.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\infra\RestaurantSocket.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\domain\services\RestaurantService.java
+D:\trab_tuta\FoodDelivery-main\Documents\NetBeansProjects\ProyectoFoodDelivery\Restaurant-Client\src\main\java\co\unicauca\restaurant\client\presentation\GUIRestaurant.java

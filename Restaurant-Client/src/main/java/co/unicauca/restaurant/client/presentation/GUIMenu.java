@@ -1,21 +1,42 @@
-
 package co.unicauca.restaurant.client.presentation;
 
-import static java.awt.Frame.MAXIMIZED_BOTH;
-import javax.swing.JInternalFrame;
-import javax.swing.JDesktopPane;
+import co.unicauca.restaurant.client.access.Factory;
+import co.unicauca.restaurant.commons.domain.User;
+import co.unicauca.restaurant.client.domain.services.UserService;
+import static co.unicauca.restaurant.client.infra.Messages.successMessage;
+import co.unicauca.restaurant.client.access.IUserAccess;
 
 /**
+ * Interfaz gráfica de Consultar clientes
  *
- * @author Luis Tabares
+ * @author Libardo Pantoja
+ *
  */
-public class GUIMenu extends javax.swing.JFrame {
+public class GUIMenu extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Constructor
      */
     public GUIMenu() {
         initComponents();
+
+        setSize(870, 500);
+        fijarMensajeExplicacion();
+        btnAgregar.setVisible(false);
+
+    }
+
+    /**
+     * Mensaje inicial del panel superior
+     */
+    private void fijarMensajeExplicacion() {
+        StringBuilder sb = new StringBuilder(64);
+        sb.append("<html>" + "Este ejercicio aplica el patrón cliente/servidor.<br>"
+                + "La aplicación cliente se conecta al servidor mediante Sockets.<br>"
+                + "El servidor devuelve el objeto Cliente consultado en formato JSON.<br>"
+                + "En el backend las cedulas desde 98000001 hasta 98000010.<br>"
+                + "</html>");
+        // lblExplicacion.setText(sb.toString());
     }
 
     /**
@@ -27,115 +48,154 @@ public class GUIMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItemGestionPlatos = new javax.swing.JMenuItem();
-        jMenuItemSalir = new javax.swing.JMenuItem();
+        pnlCentro = new javax.swing.JPanel();
+        lblNombre = new javax.swing.JLabel();
+        txtFirstName = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        pnlSur = new javax.swing.JPanel();
+        btnAgregar = new javax.swing.JButton();
+        btnCerrar = new javax.swing.JButton();
+        pnlNorte = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Crear Menu");
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
-        );
+        pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
+        pnlCentro.setLayout(new java.awt.GridLayout(2, 2, 0, 2));
 
-        jMenu1.setText("Opciones");
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblNombre.setText("IdMenu");
+        pnlCentro.add(lblNombre);
 
-        jMenuItemGestionPlatos.setText("Gestion de platos");
-        jMenuItemGestionPlatos.addActionListener(new java.awt.event.ActionListener() {
+        txtFirstName.setText("123456");
+        txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemGestionPlatosActionPerformed(evt);
+                txtFirstNameActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItemGestionPlatos);
+        pnlCentro.add(txtFirstName);
 
-        jMenuItemSalir.setText("Salir");
-        jMenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("NameMenu");
+        pnlCentro.add(jLabel1);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menú de la casa", "Menú gastronómico", "Menú de degustación", "Menú fijo", "Menú cerrado", "Menú ejecutivo", "Menú concertado", "Menú completo", "Menú sencillo", "Menú para llevar", "Menú cíclico", "Menú de platos sueltos y bebidas", "Menú largo y estrecho", "Menú corto y ancho" }));
+        pnlCentro.add(jComboBox1);
+
+        getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
+
+        pnlSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/agregar.png"))); // NOI18N
+        btnAgregar.setText("Agregar");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSalirActionPerformed(evt);
+                btnAgregarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItemSalir);
+        pnlSur.add(btnAgregar);
 
-        jMenuBar1.add(jMenu1);
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/cerrar.png"))); // NOI18N
+        btnCerrar.setText("Cerrar");
+        btnCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarActionPerformed(evt);
+            }
+        });
+        pnlSur.add(btnCerrar);
 
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
+        pnlNorte.setBorder(new javax.swing.border.MatteBorder(null));
+        pnlNorte.setLayout(new java.awt.GridBagLayout());
+
+        jLabel4.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("CREAR MENU");
+        pnlNorte.add(jLabel4, new java.awt.GridBagConstraints());
+
+        getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalirActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jMenuItemSalirActionPerformed
+    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarActionPerformed
+    // public String getTxtyId() {
+    // return txtId.getText();
+    //}
 
-    private void jMenuItemGestionPlatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGestionPlatosActionPerformed
-        GUIDish ins = new GUIDish();
-        ins.setMaximizable(true);
-        jDesktopPane1.add(ins);
-        ins.show();
-    }//GEN-LAST:event_jMenuItemGestionPlatosActionPerformed
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        IUserAccess service = Factory.getInstance().getUserService();
+        // Inyecta la dependencia
+        UserService customerService = new UserService(service);
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        User customer = new User();
+        // customer.setAtrIdentification(txtId.getText());
+        customer.setAtrNames(txtFirstName.getText());
+      //  customer.setAtrLastNames(txtLastName.getText());
+        //  customer.setAtrAddress(txtAddress.getText());
+        // customer.setAtrPhone(txtEmail.getText());
+
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+            String response = customerService.createUser(customer);
+            successMessage("Cliente " + response + " agregado con éxito.", "Atención");
+            clearControls();
+            // txtId.setText("");
+            btnAgregar.setVisible(false);
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                GUIMenu ins = new GUIMenu();
-                ins.setExtendedState(MAXIMIZED_BOTH);
-                ins.setVisible(true);
-            }
-        });
+        } catch (Exception ex) {
+            successMessage(ex.getMessage(), "Atención");
+        }
+
+
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFirstNameActionPerformed
+    /**
+     * Muestra los datos en el formulario
+     *
+     * @param customer cliente
+     */
+    private void showData(User customer) {
+//        txtFirstName.setText(customer.getFirstName());
+//        txtLastName.setText(customer.getLastName());
+//        txtAddress.setText(customer.getAddress());
+//        txtMobile.setText(customer.getMobile());
+//        txtEmail.setText(customer.getEmail());
+//        txtGender.setText(customer.getGender());
     }
 
+    public void clearControls() {
+        txtFirstName.setText("");
+    //    txtLastName.setText("");
+        //     txtAddress.setText("");
+        //   txtMobile.setText("");
+        // txtEmail.setText("");
+        // txtGender.setText("");
+    }
+
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItemGestionPlatos;
-    private javax.swing.JMenuItem jMenuItemSalir;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnCerrar;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JPanel pnlCentro;
+    private javax.swing.JPanel pnlNorte;
+    private javax.swing.JPanel pnlSur;
+    private javax.swing.JTextField txtFirstName;
     // End of variables declaration//GEN-END:variables
+
 }

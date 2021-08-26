@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package co.unicauca.restaurant.client.infra;
 
 import co.unicauca.restaurant.commons.infra.Utilities;
@@ -9,10 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Representa el Socket de la aplicación cliente. Su función es enviar una
- * solicitud/respuesta entre el cliente y el servidor.
  *
- * @author Javier
+ * @author Beca98
  */
 public class RestaurantSocket {
 
@@ -89,5 +91,4 @@ public class RestaurantSocket {
         socket = new java.net.Socket(IP_SERVER, PORT);
         Logger.getLogger("SocketClient").log(Level.INFO, "Socket establecido");
     }
-
 }

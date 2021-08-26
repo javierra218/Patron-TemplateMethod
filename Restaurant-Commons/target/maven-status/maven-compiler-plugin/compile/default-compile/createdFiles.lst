@@ -1,5 +1,10 @@
 co\unicauca\restaurant\commons\infra\JsonError.class
+co\unicauca\restaurant\commons\domain\Order.class
+co\unicauca\restaurant\commons\domain\Menu.class
+co\unicauca\restaurant\commons\domain\Plate.class
 co\unicauca\restaurant\commons\infra\Utilities.class
-co\unicauca\restaurant\commons\domain\Dish.class
+co\unicauca\restaurant\commons\domain\Restaurant.class
 co\unicauca\restaurant\commons\infra\Parameter.class
+co\unicauca\restaurant\commons\domain\User.class
+.netbeans_automatic_build
 co\unicauca\restaurant\commons\infra\Protocol.class
