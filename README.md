@@ -1,2 +1,0 @@
-# Patron-TemplateMethod
- 

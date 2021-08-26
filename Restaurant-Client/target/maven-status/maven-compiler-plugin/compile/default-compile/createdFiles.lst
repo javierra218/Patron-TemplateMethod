@@ -1,0 +1,14 @@
+co\unicauca\restaurant\client\presentation\GUIMenu.class
+co\unicauca\restaurant\client\presentation\GUIMenu$1.class
+co\unicauca\restaurant\client\access\Factory.class
+co\unicauca\restaurant\client\presentation\GUIDish$3.class
+co\unicauca\restaurant\client\domain\services\DishService.class
+co\unicauca\restaurant\client\presentation\GUIMenu$3.class
+co\unicauca\restaurant\client\access\DishAccessImplSockets.class
+co\unicauca\restaurant\client\infra\Messages.class
+co\unicauca\restaurant\client\presentation\GUIDish$1.class
+co\unicauca\restaurant\client\presentation\GUIDish$2.class
+co\unicauca\restaurant\client\access\IDishAccess.class
+co\unicauca\restaurant\client\presentation\GUIMenu$2.class
+co\unicauca\restaurant\client\infra\RestaurantSocket.class
+co\unicauca\restaurant\client\presentation\GUIDish.class

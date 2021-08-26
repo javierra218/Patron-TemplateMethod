@@ -1,0 +1,4 @@
+co\unicauca\serversocket\serversockettemplate\helpers\JsonError.class
+co\unicauca\serversocket\serversockettemplate\helpers\Utilities.class
+co\unicauca\serversocket\serversockettemplate\infra\ExecuteServer.class
+co\unicauca\serversocket\serversockettemplate\infra\ServerSocketTemplate.class
